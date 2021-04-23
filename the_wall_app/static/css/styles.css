@@ -1,0 +1,13 @@
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+.col2 {
+  min-height: 100px;
+  width: 900px;
+  overflow: visible;
+}
+.col2 p {
+  margin-left: 10px;
+  margin-top: 15px;
+}
