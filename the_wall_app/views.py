@@ -14,6 +14,7 @@ def index(request):
         'posts':post,
     }
     return render(request, 'index.html',context)
+    
 
 def comment_create(request):
     post=Post.objects.get(id=request.POST['post_id'])
