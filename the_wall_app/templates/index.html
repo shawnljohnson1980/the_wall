@@ -47,6 +47,10 @@
             <div class="col">{% for post in posts reversed %}
                 <div class="col border rounded-2 border-dark shadow mt-3">
                     <p>Posted by:{{ post.creator.first_name }}:{{ post.content }}</p>
+                    {% if creator.id == request.session.id %}
+                    <a class="btn  btn-sm  btn-danger shadow border border-rounded"
+                        href="/the_wall/delete/{{ post.id }}">Delete</a>
+                    {% endif %}
                     {% for comment in post.comments.all reversed %}
                     <p>{{ comment.creator.first_name }}, Said- {{ comment.content }}</p>
                     {% endfor %}

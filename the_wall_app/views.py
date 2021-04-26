@@ -47,7 +47,10 @@ def like(request):
         post.save()
         return redirect('/the_wall')
 
-
+def delete(request,post_id):
+    post = Post.objects.get(id=post_id)
+    post.delete()
+    return redirect('/the_wall')
 
 def log_out(request):
     request.session.flush()
