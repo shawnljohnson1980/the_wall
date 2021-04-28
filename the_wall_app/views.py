@@ -32,10 +32,8 @@ def message_create(request):
     Post.objects.create(
     content=request.POST['content'],
     creator=user,
-    
     )
     return redirect('/the_wall')
-
 
 
 def like(request):
